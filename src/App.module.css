@@ -55,6 +55,10 @@ body {
     transition: all ease .3s;
 }
 
+hr {
+    
+}
+
 .leftSide button:hover{
     opacity: .8;
 

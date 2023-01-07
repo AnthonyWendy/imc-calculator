@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import poweredImage from './assets/powered.png';
+import { levels, calculateimc } from './helpers/imc';
 
 const App = () => {
 
   const [ heigthField, setHeigthField ] = useState<number>(0); //useState<number>(0) = não podera setar outro tipo de argumento, somente number.
   const [weightFiled, setWeightFiled] = useState<number>(0);
-  
+
   const hancleCalculateButton = () => {
     if(heigthField && weightFiled){
 
@@ -27,6 +28,7 @@ const App = () => {
         <div className={styles.leftSide}>
           <h1>Calcule o seu IMC</h1>
           <p>Criado no século 19 pelo matemático Lambert Quételet, o Índice de Massa Corporal, conhecido pela sigla IMC, é um cálculo simples que permite medir se alguém está ou não com o peso ideal. Ele aponta se o peso está adequado ou se está abaixo ou acima do peso.</p>
+
 
 
           <input
