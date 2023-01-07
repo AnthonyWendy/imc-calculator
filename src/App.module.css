@@ -55,10 +55,6 @@ body {
     transition: all ease .3s;
 }
 
-hr {
-    
-}
-
 .leftSide button:hover{
     opacity: .8;
 
@@ -67,4 +63,13 @@ hr {
 .rightSide {
     flex: 1;
     margin-left: 40px;
+    display: flex;
+
+}
+
+.container .rightSide .grid{
+    flex:1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
