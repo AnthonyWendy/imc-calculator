@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import poweredImage from './assets/powered.png';
+import leftArrowImage from './assets/leftarrow.png';
 import { levels, calculateimc, level } from './helpers/imc';
 import { GridItem } from './components/GridItem';
 
@@ -18,6 +19,11 @@ const App = () => {
     }
   }
 
+  const handleBackButton = () => {
+    setToShow(null);
+    setHeigthField(0);
+    setWeightFiled(0);
+  }
 
   return (
     <div className={styles.main}>
@@ -55,10 +61,11 @@ const App = () => {
         }
         {toShow &&
           <div className={styles.rightBig}>
-            <div className={styles.rightArrow}></div>
+            <div className={styles.rightArrow} onClick={handleBackButton}>
+              <img src={leftArrowImage} alt="" width={25} />
+            </div>
             <GridItem item={toShow} />
           </div>
-
         }
         </div>
       </div>

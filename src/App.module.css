@@ -76,5 +76,23 @@ body {
 .rightBig {
     flex: 1;
     display: flex;
-    
+}
+
+.rightSide .rightArrow {
+    position: absolute;
+    background-color: #227C9D;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -35px;
+    margin-top: 145px;
+    transition: .3s;
+}
+
+.rightSide .rightArrow:hover{
+    opacity: .8;
 }
