@@ -11,9 +11,13 @@ export const GridItem = ({ item}: Props) => {
     return (
         <div className={styles.main} style={{ backgroundColor: item.color }}>
             <div className={styles.gradIcon}>
-                <img src={item.icon == 'up' ? upImage:downImage} alt="" width="30"/>
+                <img src={item.icon === 'up' ? upImage:downImage} alt="" width="30"/>
             </div>
             <div className={styles.gradTitle}>{item.title}</div>
+            {item.yourImc &&
+                <div className={styles.yourImc}>Seu IMC é {item.yourImc} kg/m².</div>
+
+            }
             <div className={styles.gradInfo}>
                 <>
                     O seu IMC está entre <strong>{item.imc[0]}</strong> e <strong>{item.imc[1]}</strong>
